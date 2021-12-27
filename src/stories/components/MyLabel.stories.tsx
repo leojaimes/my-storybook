@@ -1,28 +1,52 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { MyLabel, MyLabelProps } from '../../components/MyLabel';
- 
- 
-//export component
-export default    {
-   title: 'UI/Etiquetas/MyLabel', //Carpeta a la que pertenece
-   component: MyLabel,
-  
-} as ComponentMeta<typeof MyLabel> 
+import { MyLabel } from '../../components/MyLabel';
 
 
+export default {
+    title: 'UI/MyLabel',
+    component: MyLabel,
+    argTypes: {
+        size: { control: 'select' },
+        color: { control: 'select' },
+        fontColor: { control: 'color' }
+    }
+} as ComponentMeta<typeof MyLabel>
 
-//create template
-const Template : ComponentStory<typeof MyLabel>  = (args: MyLabelProps  )=>  <MyLabel {...args}   /> 
- 
+const Template: ComponentStory<typeof MyLabel> = (args) => <MyLabel { ...args } />
 
 
-//Hostories
 export const Basic = Template.bind({});
 Basic.args = {
-    size: "normal"//valor por default seleccionado en las Stroy Basic
+    size: 'normal',
+    allCaps: false // true: capitalizar toda la palabra
 }
- 
 
 export const AllCaps = Template.bind({});
+AllCaps.args = {
+    size: 'normal',
+    allCaps: true
+}
 
 export const Secondary = Template.bind({});
+Secondary.args = {
+    size: 'normal',
+    color: 'secondary' // primary | secondary | tertiary
+}
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+    size: 'normal',
+    color: 'tertiary'
+}
+
+export const CustomFontColor = Template.bind({});
+CustomFontColor.args = {
+    size: 'h1',
+    fontColor: '#5517ac'
+}
+
+export const CustomBackgroundColor = Template.bind({});
+CustomBackgroundColor.args = {
+    size: 'h1',
+    fontColor: '#eeeeee',
+}
