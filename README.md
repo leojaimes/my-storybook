@@ -4,14 +4,17 @@ yarn build-storybook
 upladed in
 https://storybook-leo.netlify.app/?path=/story/ui-mylabel--basic
 
+`````
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "chromatic": "npx chromatic --project-token=2c73d1f0e117"
+````
 
 ## Configurar package.json para desplegar en github actions:
 
+````
 "typings": "dist/index.d.ts",
 "main": "dist/index.js",
 "homepage": "https://leo.jaimes.estevez.dev",
@@ -29,6 +32,9 @@ https://storybook-leo.netlify.app/?path=/story/ui-mylabel--basic
 "src"
 ]
 },
+
+````
+
 
 # Cambios en tsconfig.json
 
@@ -78,3 +84,16 @@ agregar al archivo json luego de la instalación de semantic-release (yarn add -
 "@semantic-release/npm",
 "@semantic-release/git"
 ],
+
+## Git hub token generated.
+
+```
+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
+```
+
+## npm generated token
+
+```
+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`
+```
+`````
