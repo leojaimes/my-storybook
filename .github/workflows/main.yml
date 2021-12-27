@@ -37,7 +37,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
