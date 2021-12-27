@@ -35,7 +35,7 @@ jobs:
       - name: Semantic release
         env:
           GITHUB-TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB-TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic -release
 
       # Runs a single command using the runners shell
